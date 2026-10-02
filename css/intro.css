@@ -1,0 +1,188 @@
+/* ==========================================================================
+   Opening screen — bright pastel pink clouds, bokeh, fine gold glitter,
+   photo as stacked rounded cards with a rotating seal,
+   names joined by a heartbeat (ECG) line; everything is revealed top → bottom
+   Behaviour: js/intro.js
+   ========================================================================== */
+
+.intro { display: none; }
+.js .intro {
+  /* bright gold foil for the button; --gold for lines; --ink for text on pastel pink */
+  --foil: linear-gradient(105deg, #F2B93B 0%, #FFE08A 22%, #FFF7DA 38%, #F7C948 56%, #FFE08A 74%, #EFAE2B 100%);
+  --gold: #F2B93B;
+  --ink: #C2337F;
+
+  position: fixed; inset: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; color: var(--ink);
+  background: linear-gradient(165deg, #FFE4F0 0%, #FFC1DB 48%, #FFA3CB 100%);
+  transition: opacity .9s ease, transform .9s cubic-bezier(.5, 0, .2, 1), filter .9s ease;
+}
+/* opening: fly through the gate into the card */
+.intro.is-opening { opacity: 0; transform: scale(1.35); filter: brightness(1.15) blur(6px); pointer-events: none; }
+
+/* ---------- Backdrop: colour clouds, bokeh and fine gold glitter (js/intro.js) ---------- */
+.intro__sky { position: absolute; inset: 0; pointer-events: none; }
+/* drifting pastel colour clouds: white, lilac, peach, hot pink */
+.intro__sky::before {
+  content: ''; position: absolute; inset: -20%;
+  background:
+    radial-gradient(38% 30% at 22% 18%, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(36% 30% at 86% 22%, rgba(233, 200, 255, .9), rgba(233, 200, 255, 0) 70%),
+    radial-gradient(42% 32% at 12% 82%, rgba(255, 214, 170, .9), rgba(255, 214, 170, 0) 70%),
+    radial-gradient(44% 34% at 88% 86%, rgba(255, 110, 170, .75), rgba(255, 110, 170, 0) 70%);
+  filter: blur(30px);
+  animation: auroraDrift 14s ease-in-out infinite alternate;
+}
+/* soft out-of-focus lights */
+.bokeh {
+  position: absolute; width: var(--size, 80px); height: var(--size, 80px); border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, .95), var(--color, rgba(255, 214, 110, .6)) 55%, rgba(255, 255, 255, 0) 72%);
+  opacity: var(--alpha, .3); filter: blur(2px);
+  animation: bokehFloat var(--dur, 9s) ease-in-out var(--delay, 0s) infinite alternate;
+}
+
+/* ---------- Gold double-line frame around the screen ---------- */
+.intro__frame {
+  position: absolute; inset: 12px; border-radius: 26px; pointer-events: none;
+  border: 1.5px solid var(--gold);
+  animation: fadeIn 1.2s ease both;
+}
+.intro__frame::after {
+  content: ''; position: absolute; inset: 5px; border-radius: 20px;
+  border: 1px solid rgba(242, 185, 59, .5);
+}
+
+/* ---------- Content column ---------- */
+.intro__content {
+  position: relative; z-index: 2;
+  width: min(400px, 86vw);
+  display: flex; flex-direction: column; align-items: center; gap: clamp(7px, 1.5vh, 13px);
+  text-align: center;
+}
+/* pool of light behind the text so it stays readable on the colourful backdrop */
+.intro__content::before {
+  content: ''; position: absolute; inset: -8% -22%; z-index: -1;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, .88) 0%, rgba(255, 255, 255, .6) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.intro__guest {
+  font-size: clamp(18px, 5vw, 21px); font-weight: 300; letter-spacing: .06em; color: var(--ink);
+  padding: 9px 22px;
+  border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
+  animation: dropIn .7s ease .1s both;
+}
+.intro__guest b { font-weight: 500; color: var(--berry); }
+.intro__eyebrow {
+  font-family: var(--serif); font-weight: 600; font-size: clamp(15px, 4.2vw, 18px);
+  letter-spacing: .42em; padding-left: .42em; text-transform: uppercase; color: var(--ink);
+  animation: dropIn .7s ease .35s both;
+}
+
+/* ---------- Photo portal: stacked rounded cards, zooms in fast then stays still ---------- */
+.portal {
+  position: relative; margin: 16px 0 10px;
+  height: clamp(200px, 41vh, 380px); height: clamp(200px, 41svh, 380px); aspect-ratio: 3 / 4;
+  animation: portalZoom 1s cubic-bezier(.16, 1, .3, 1) .6s both;
+}
+/* two tilted layers behind the photo: a gold outline and a white sheet */
+.portal::before, .portal::after { content: ''; position: absolute; inset: 0; border-radius: 30px; }
+.portal::before { border: 1.5px solid var(--gold); transform: rotate(-6deg); }
+.portal::after { background: rgba(255, 255, 255, .8); box-shadow: 0 18px 40px -22px rgba(240, 96, 158, .7); transform: rotate(5deg); }
+.portal__photo {
+  position: relative; z-index: 1; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 30%;
+  border-radius: 30px; border: 2px solid transparent;
+  background: var(--foil) border-box;
+  box-shadow: 0 26px 46px -24px rgba(212, 69, 143, .75);
+}
+/* round seal on the photo corner: date text circling the monogram */
+.portal__seal {
+  position: absolute; z-index: 2; right: -30px; bottom: -22px; width: 86px; height: 86px;
+  filter: drop-shadow(0 10px 14px rgba(212, 69, 143, .5));
+  animation: popIn .7s cubic-bezier(.3, 1.5, .5, 1) 1.3s both;
+}
+.portal__seal circle { fill: #F0609E; stroke: #FFD56B; stroke-width: 2; }
+.portal__seal text { fill: #fff; font-family: var(--serif); font-weight: 600; }
+.portal__seal-ring { font-size: 9px; transform-box: view-box; transform-origin: center; animation: sealSpin 18s linear infinite; }
+.portal__seal-mono { font-size: 23px; }
+
+.intro__names { font-size: clamp(34px, 10.4vw, 48px); }
+.intro__names .duo__a { animation: dropIn .7s ease 1.2s both; }
+.intro__names .beat { animation: fadeIn .6s ease 1.5s both; }
+.intro__names .beat__live { animation-delay: 1.6s; }
+.intro__names .duo__b { animation: dropIn .7s ease 1.75s both; }
+.intro__date {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--serif); font-weight: 600; font-size: clamp(19px, 5.4vw, 23px); letter-spacing: .26em; color: var(--ink);
+  animation: dropIn .7s ease 2.05s both;
+}
+.intro__date::before, .intro__date::after { content: ''; width: 30px; height: 1px; background: linear-gradient(90deg, rgba(242, 185, 59, 0), var(--gold)); }
+.intro__date::after { transform: scaleX(-1); }
+
+/* gold button with a travelling sheen */
+.intro__open {
+  position: relative; overflow: hidden;
+  margin-top: 10px; min-height: 58px; padding: 0 44px;
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+  border: 0; border-radius: 999px;
+  background: var(--foil);
+  box-shadow: 0 16px 30px -14px rgba(239, 174, 43, .9), inset 0 1px 0 rgba(255, 255, 255, .9), inset 0 -2px 0 rgba(200, 130, 10, .3);
+  color: var(--berry); font-family: inherit; font-size: 17px; font-weight: 500; letter-spacing: .06em; cursor: pointer;
+  animation: dropIn .7s ease 2.3s both, pulse 2.4s ease-in-out 3.2s infinite;
+  transition: transform .2s;
+}
+.intro__open small { font-family: var(--serif); font-weight: 600; font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--berry); }
+.intro__open::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, .85) 50%, rgba(255, 255, 255, 0) 62%);
+  transform: translateX(-120%);
+  animation: sheen 3.4s ease-in-out 3.2s infinite;
+}
+.intro__open:hover, .intro__open:focus-visible { transform: scale(1.04); outline: none; }
+
+/* ---------- Fine glitter (spawned by js/intro.js): slender 4-point stars and tiny specks ---------- */
+.sparkle {
+  position: absolute; z-index: 1; width: var(--size, 14px); height: var(--size, 14px);
+  background: var(--color, #FFD970);
+  clip-path: polygon(50% 0, 54% 46%, 100% 50%, 54% 54%, 50% 100%, 46% 54%, 0 50%, 46% 46%);
+  opacity: 0; animation: twinkle var(--dur, 4s) ease-in-out var(--delay, 0s) infinite;
+}
+.glint {
+  position: absolute; z-index: 1; width: var(--size, 3px); height: var(--size, 3px); border-radius: 50%;
+  background: #FFF6D6; box-shadow: 0 0 5px 1.5px rgba(255, 196, 60, .95);
+  opacity: 0; animation: glitter var(--dur, 2s) ease-in-out var(--delay, 0s) infinite;
+}
+
+@keyframes bokehFloat { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(var(--dx, 20px), -46px, 0) scale(1.18); } }
+@keyframes portalZoom { from { opacity: 0; transform: scale(.5); } to { opacity: 1; transform: none; } }
+@keyframes sealSpin { to { transform: rotate(360deg); } }
+@keyframes sheen { 0%, 55% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 16px 30px -14px rgba(239, 174, 43, .9), inset 0 1px 0 rgba(255, 255, 255, .9), inset 0 -2px 0 rgba(200, 130, 10, .3), 0 0 0 0 rgba(255, 208, 77, .6); }
+  50% { box-shadow: 0 16px 30px -14px rgba(239, 174, 43, .9), inset 0 1px 0 rgba(255, 255, 255, .9), inset 0 -2px 0 rgba(200, 130, 10, .3), 0 0 0 13px rgba(255, 208, 77, 0); }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: translateY(0) scale(.4); }
+  50% { opacity: 1; transform: translateY(-10px) scale(1); }
+}
+@keyframes glitter {
+  0%, 100% { opacity: 0; transform: scale(.3); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+
+/* shorter screens: slightly smaller photo so nothing touches the frame */
+@media (max-height: 700px) {
+  .portal { height: 34vh; height: 34svh; margin: 12px 0 6px; }
+}
+@media (max-height: 620px) {
+  .portal { height: 29vh; height: 29svh; }
+  .portal__seal { width: 70px; height: 70px; right: -24px; bottom: -18px; }
+  .intro__open { min-height: 50px; margin-top: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro__frame, .intro__guest, .intro__eyebrow, .portal, .intro__names .duo__a, .intro__names .duo__b, .intro__names .beat, .intro__date, .intro__open { animation: none; }
+  .portal__seal, .portal__seal-ring, .intro__open::after, .intro__sky::before, .bokeh { animation: none; }
+  .intro { transition-duration: .01s; }
+  .sparkle, .glint { display: none; }
+}

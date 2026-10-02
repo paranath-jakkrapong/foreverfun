@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Content sections — invitation, heartbeat verse, schedule, couple,
+   dress code, venue, wishes, footer
+   ========================================================================== */
+
+/* ---------- Invitation: glass card on aurora ---------- */
+.invite { padding: 44px 18px 48px; }
+.invite__card { padding: 36px 20px 38px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.invite__guest { font-size: 15px; font-weight: 300; color: var(--muted); letter-spacing: .04em; }
+.invite__guest b { font-weight: 500; color: var(--plum); }
+.parents { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: center; width: 100%; font-size: 14px; line-height: 1.75; }
+.parents__col { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.amp { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--rose); }
+.invite__text { font-size: 15px; line-height: 1.9; color: var(--muted); }
+.couple-name { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.couple-name__th {
+  font-weight: 300; font-size: clamp(22px, 6.4vw, 27px); line-height: 1.5;
+  letter-spacing: .04em; white-space: nowrap; color: var(--berry);
+}
+.and { font-family: var(--serif); font-style: italic; font-size: 30px; color: var(--rose); line-height: 1; }
+
+/* ---------- Verse: an ECG line that beats into a heart ---------- */
+.verse { padding: 44px 24px 46px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.verse b { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 28px; }
+.verse span { font-size: 13px; font-weight: 300; letter-spacing: .18em; color: #FFE3F0; }
+.pulse {
+  width: min(300px, 86%); height: auto; margin-bottom: 6px;
+  fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, .9));
+  animation: ecg 4.5s ease-in-out infinite;
+}
+
+/* ---------- Schedule ---------- */
+.schedule { padding: 56px 24px 32px; display: flex; flex-direction: column; gap: 28px; }
+.schedule .title { font-size: 24px; }
+.group { display: flex; flex-direction: column; gap: 10px; }
+.group__head { display: flex; align-items: baseline; justify-content: space-between; padding: 0 4px 4px; }
+.group__th { font-size: 15px; font-weight: 500; color: var(--berry); }
+.group__en { font-family: var(--serif); font-weight: 600; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--magenta); }
+
+/* vertical timeline */
+.timeline { position: relative; display: flex; flex-direction: column; gap: 6px; padding: 4px 0; }
+.timeline::before {
+  content: ''; position: absolute; left: 86px; top: 14px; bottom: 14px; width: 1px;
+  background: linear-gradient(180deg, transparent, var(--pink) 12%, var(--pink) 88%, transparent);
+}
+.tl-item { position: relative; display: grid; grid-template-columns: 70px 1fr; gap: 32px; align-items: center; padding: 14px 4px; }
+.tl-item::before {
+  content: ''; position: absolute; left: 82px; top: 50%; width: 9px; height: 9px; margin-top: -4.5px;
+  border-radius: 50%; background: var(--cloud); border: 1px solid var(--rose);
+  box-shadow: 0 0 0 4px var(--cloud);
+}
+.tl-item.is-visible::before { background: var(--rose); box-shadow: 0 0 0 4px var(--cloud), 0 0 12px 4px rgba(240, 96, 158, .5); transition: background .6s ease .3s, box-shadow .6s ease .3s; }
+.tl-time { text-align: right; font-size: 26px; font-weight: 200; line-height: 1; color: var(--magenta); font-variant-numeric: tabular-nums; }
+.tl-time small { display: block; margin-top: 4px; font-size: 10px; font-weight: 300; letter-spacing: .2em; color: var(--muted); }
+.tl-body { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+.tl-th { font-size: 15px; font-weight: 400; line-height: 1.4; color: var(--plum); }
+.tl-en { font-size: 12px; font-weight: 300; color: var(--muted); letter-spacing: .02em; }
+
+/* evening reception card */
+.reception {
+  border-radius: 24px; padding: 28px 22px;
+  display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;
+  box-shadow: var(--shadow);
+}
+.reception__time { font-size: 44px; font-weight: 300; line-height: 1; letter-spacing: .04em; }
+.reception__time span { font-size: 14px; color: #FFE3F0; letter-spacing: .1em; }
+.reception__th { font-size: 16px; font-weight: 500; }
+.reception__en { font-size: 12px; font-weight: 300; color: #FFE3F0; letter-spacing: .06em; }
+
+/* ---------- The couple ---------- */
+.couple { padding: 40px 20px 12px; display: flex; flex-direction: column; gap: 28px; }
+.couple__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+.person { padding: 22px 12px 18px; display: flex; flex-direction: column; align-items: center; gap: 5px; text-align: center; }
+.person--offset { margin-top: 30px; }
+/* initial inside a rotating halo; swap for a portrait <img> when one is supplied */
+.person__avatar {
+  position: relative; width: 96px; height: 96px; margin-bottom: 8px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 4px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box, conic-gradient(from var(--angle), #FF9FC6, #FFE1A6, #CDE7FF, #E3CCFF, #FF9FC6) border-box;
+  box-shadow: 0 0 22px rgba(255, 159, 198, .75);
+  font-family: var(--serif); font-weight: 500; font-size: 52px; line-height: 1;
+  animation: spin 7s linear infinite;
+}
+.person__avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.person__role { font-family: var(--serif); font-weight: 600; font-size: 13px; letter-spacing: .28em; text-transform: uppercase; color: var(--magenta); }
+.person__name { font-size: 18px; font-weight: 400; color: var(--berry); line-height: 1.5; }
+.person__nick { margin-bottom: 6px; font-size: 14px; color: var(--muted); }
+.person__parents { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* ---------- Dress code ---------- */
+.dress { padding: 48px 30px 52px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.swatches { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.swatches span { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 8px 16px -8px rgba(212, 69, 143, .7); }
+.dress p { margin: 0; font-size: 14px; line-height: 1.8; color: var(--muted); }
+
+/* ---------- Venue & wishes ---------- */
+.venue, .wishes { padding: 52px 30px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.venue__en { font-family: var(--serif); font-size: 17px; letter-spacing: .06em; color: #FFE3F0; }
+.qr { padding: 12px; border-radius: 20px; background: #fff; box-shadow: var(--shadow); }
+.qr img { width: 150px; height: 150px; object-fit: cover; border-radius: 10px; }
+/* empty slot until the real QR image exists */
+.qr--todo {
+  width: 174px; height: 174px; display: flex; align-items: center; justify-content: center;
+  border: 1.5px dashed var(--rose); font-size: 13px; line-height: 1.7; color: var(--berry);
+}
+.hint { font-size: 13px; color: #FFE3F0; }
+.wishes p { margin: 0; font-size: 14px; line-height: 1.8; color: var(--muted); }
+
+/* ---------- Footer (extra bottom space for the dock) ---------- */
+.footer { padding: 24px 30px 116px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.footer__quote { font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--berry); }
+.footer__meta { font-size: 13px; color: var(--muted); letter-spacing: .04em; }
+
+@media (max-width: 380px) {
+  .invite { padding-left: 12px; padding-right: 12px; }
+  .venue, .wishes, .dress { padding-left: 20px; padding-right: 20px; }
+  .couple { padding-left: 14px; padding-right: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse { animation: none; stroke-dashoffset: 0; }
+  .person__avatar { animation: none; }
+}

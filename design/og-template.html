@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Source for the link-preview image. Render at 1200x630 and save as assets/images/og.jpg:
+     chrome --headless=new --window-size=1200,630 --screenshot=og.png design/og-template.html -->
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<link href="../assets/fonts/google-fonts-og-template.css" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { display: flex; font-family: 'Prompt', sans-serif; background: radial-gradient(120% 90% at 70% 0%, #FFFFFF 0%, #FFE6F1 40%, #FFC6DF 80%, #F5A6CE 100%); }
+  .photo { width: 470px; height: 630px; position: relative; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
+  .photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,230,241,0) 72%, #FFE6F1 100%); }
+  .panel { flex: 1; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; color: #A82869; }
+  .panel::before { content: ''; position: absolute; inset: 28px; border: 2px solid rgba(255,255,255,.9); border-radius: 36px; }
+  .eyebrow { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; letter-spacing: .42em; color: #D4458F; }
+  .names { font-family: 'Charmonman', cursive; font-weight: 700; font-size: 84px; line-height: 1.6; background: linear-gradient(100deg, #A82869, #F0609E 45%, #FFB56B 60%, #D4458F); -webkit-background-clip: text; color: transparent; }
+  .names em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 56px; padding: 0 4px; }
+  .date { display: flex; align-items: center; gap: 18px; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 40px; letter-spacing: .26em; }
+  .date::before, .date::after { content: ''; width: 50px; height: 2px; background: #F0609E; }
+  .th { margin-top: 10px; font-weight: 300; font-size: 26px; color: #8A5273; }
+</style>
+</head>
+<body>
+  <div class="photo"><img src="../assets/couple/001.jpg" alt=""></div>
+  <div class="panel">
+    <div class="eyebrow">THE WEDDING OF</div>
+    <div class="names">ปารณัท <em>&amp;</em> จักรพงษ์</div>
+    <div class="date">19 · 12 · 2569</div>
+    <div class="th">วันเสาร์ที่ 19 ธันวาคม พ.ศ. 2569</div>
+  </div>
+</body>
+</html>
