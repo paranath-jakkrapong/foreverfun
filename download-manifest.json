@@ -1,0 +1,195 @@
+{
+    "source":  "https://thonganek.github.io/wedding/",
+    "repository":  "https://github.com/Thonganek/wedding",
+    "commit":  "6a22ccd1f9a2a2eece60a66186ea30392e370f33",
+    "downloaded_at":  "2026-10-02T19:38:00.9285347+07:00",
+    "verified_source_files":  32,
+    "google_font_stylesheets":  [
+                                    {
+                                        "url":  "https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700\u0026family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400\u0026family=Prompt:wght@200;300;400;500;600\u0026display=swap",
+                                        "path":  "assets/fonts/google-fonts-index.css"
+                                    },
+                                    {
+                                        "url":  "https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500\u0026display=swap",
+                                        "path":  "assets/fonts/google-fonts-invite-links.css"
+                                    },
+                                    {
+                                        "url":  "https://fonts.googleapis.com/css2?family=Charmonman:wght@700\u0026family=Cormorant+Garamond:wght@600\u0026family=Prompt:wght@300\u0026display=block",
+                                        "path":  "assets/fonts/google-fonts-og-template.css"
+                                    }
+                                ],
+    "font_files":  [
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cv_4IZ2MuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cv_4IZ2MuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W__XJnvUD7dzB2KbtodVkI.woff2",
+                           "path":  "assets/fonts/-W__XJnvUD7dzB2KbtodVkI.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/charmonman/v20/MjQAmiR3vP_nuxDv47jiYC2HqLhA9Q.woff2",
+                           "path":  "assets/fonts/MjQAmiR3vP_nuxDv47jiYC2HqLhA9Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/charmonman/v20/MjQDmiR3vP_nuxDv47jiaJmivYdh.woff2",
+                           "path":  "assets/fonts/MjQDmiR3vP_nuxDv47jiaJmivYdh.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2",
+                           "path":  "assets/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-iNM8.woff2",
+                           "path":  "assets/fonts/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-iNM8.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-hdM8Efs.woff2",
+                           "path":  "assets/fonts/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-hdM8Efs.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/charmonman/v20/MjQAmiR3vP_nuxDv47jiYC2HqKxA9dhm.woff2",
+                           "path":  "assets/fonts/MjQAmiR3vP_nuxDv47jiYC2HqKxA9dhm.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Ck_kIfWMuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Ck_kIfWMuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Ck_kIZ2MuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Ck_kIZ2MuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/charmonman/v20/MjQDmiR3vP_nuxDv47jiaJaivQ.woff2",
+                           "path":  "assets/fonts/MjQDmiR3vP_nuxDv47jiaJaivQ.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Ck_kIZmMuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Ck_kIZmMuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cy_gIZmMuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cy_gIZmMuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/charmonman/v20/MjQAmiR3vP_nuxDv47jiYC2HqLZA9dhm.woff2",
+                           "path":  "assets/fonts/MjQAmiR3vP_nuxDv47jiYC2HqLZA9dhm.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2",
+                           "path":  "assets/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/charmonman/v20/MjQDmiR3vP_nuxDv47jiaJiivYdh.woff2",
+                           "path":  "assets/fonts/MjQDmiR3vP_nuxDv47jiaJiivYdh.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnTOig.woff2",
+                           "path":  "assets/fonts/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnTOig.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnrOiss4.woff2",
+                           "path":  "assets/fonts/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnrOiss4.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-htM8Efs.woff2",
+                           "path":  "assets/fonts/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-htM8Efs.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W__XJnvUD7dzB2KYNod.woff2",
+                           "path":  "assets/fonts/-W__XJnvUD7dzB2KYNod.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2",
+                           "path":  "assets/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-h9M8Efs.woff2",
+                           "path":  "assets/fonts/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-h9M8Efs.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2",
+                           "path":  "assets/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnnOiss4.woff2",
+                           "path":  "assets/fonts/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnnOiss4.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cr_sIaWMu.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cr_sIaWMu.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/charmonman/v20/MjQDmiR3vP_nuxDv47jiaIKivYdh.woff2",
+                           "path":  "assets/fonts/MjQDmiR3vP_nuxDv47jiaIKivYdh.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cr_sIZmMuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cr_sIZmMuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-jNM8Efs.woff2",
+                           "path":  "assets/fonts/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-jNM8Efs.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cr_sIZ2MuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cr_sIZ2MuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnvOiss4.woff2",
+                           "path":  "assets/fonts/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnvOiss4.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnDOiss4.woff2",
+                           "path":  "assets/fonts/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnDOiss4.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cy_gIaWMu.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cy_gIaWMu.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cv_4IfWMuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cv_4IfWMuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/charmonman/v20/MjQAmiR3vP_nuxDv47jiYC2HqLdA9dhm.woff2",
+                           "path":  "assets/fonts/MjQAmiR3vP_nuxDv47jiYC2HqLdA9dhm.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cr_sIfWMuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cr_sIfWMuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cy_gIZ2MuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cy_gIZ2MuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2",
+                           "path":  "assets/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cy_gIfWMuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cy_gIfWMuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W__XJnvUD7dzB2KdNodVkI.woff2",
+                           "path":  "assets/fonts/-W__XJnvUD7dzB2KdNodVkI.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cv_4IaWMu.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cv_4IaWMu.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W_8XJnvUD7dzB2Cv_4IZmMuQ5Q.woff2",
+                           "path":  "assets/fonts/-W_8XJnvUD7dzB2Cv_4IZmMuQ5Q.woff2"
+                       },
+                       {
+                           "url":  "https://fonts.gstatic.com/s/prompt/v12/-W__XJnvUD7dzB2Kb9odVkI.woff2",
+                           "path":  "assets/fonts/-W__XJnvUD7dzB2Kb9odVkI.woff2"
+                       }
+                   ]
+}
